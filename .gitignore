@@ -1,0 +1,10 @@
+# Secrets and target environment inventory
+devices.csv
+.env
+*.log
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+.venv/
+venv/
