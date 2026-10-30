@@ -15,8 +15,8 @@ def test_ssh(ip: str, user: str, secret: str, timeout: int = 5) -> tuple[bool, s
     }
     
     try:
-        connection = ConnectHandler(**device)
-        connection.disconnect()
+        with ConnectHandler(**device) as connection:
+            pass
         return True, "Connection successful"
     except NetmikoAuthenticationException:
         return False, "Authentication failed"
